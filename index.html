@@ -2,21 +2,25 @@
 <html>
     <head>
         <title>D3 js</title>
-        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/d3-scale@4" defer></script>
+        <script src="./app.js" defer></script>
         <style>
             .container {
                 width: 250px;
                 height: 250px;
+                /* display: flex; */
+                /* justify-content: space-evenly; */
+                /* align-items: end; */
             }
             .bar {
-                width: 40px;
-                height: 200px;
-                color: rgb(192, 221, 221);
+                /* width: 40px; */
+                /* height: 250px; */
+                fill: rgb(109, 232, 148);
             }
         </style>
     </head>
     <body>
-        <div></div>
-        <script src="./app.js"></script>
+        <svg></svg>
     </body>
 </html>

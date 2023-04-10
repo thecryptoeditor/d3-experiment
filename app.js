@@ -1,8 +1,8 @@
 let dummyData = [
-    {id: 'd1', name: 'Jatin', state: 'FGHJ', value: '200'},
-    {id: 'd2', name: 'Jatin1', state: 'RTYU', value: '120'},
-    {id: 'd3', name: 'Jatin2', state: 'CVBNM', value: '140'},
-    {id: 'd4', name: 'Jatin3', state: 'RTYGHB', value: '160'},
+    {id: 'd1', state: 'FGHJ', value: '200'},
+    {id: 'd2', state: 'RTYU', value: '120'},
+    {id: 'd3', state: 'CVBNM', value: '140'},
+    {id: 'd4',  state: 'RTYGHB', value: '160'},
 ]
 
 const xScale = d3.scaleBand().domain(dummyData.map( i => i.state)).rangeRound([0, 250]).padding(0.1);
@@ -27,7 +27,5 @@ const bar = container
     .attr('width', xScale.bandwidth())
     .attr('height', (aData) => 250 - yScale(aData.value))
     .attr('x', (aData => xScale(aData.state)))
-    .attr('y', (aData => yScale(aData.value)))
-
-    ;
+    .attr('y', (aData => yScale(aData.value)));
 
